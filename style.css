@@ -88,13 +88,14 @@
 }
 html, body {
     font-family: 'Akshar', sans-serif;
-    filter: drop-shadow(0 0 2000px rgba(150, 0, 255, 0.7));
+    filter: drop-shadow(0 0 200px rgba(150, 0, 255, 0.7));
     line-height: 1.2;
 }
 
 h2 {
 
-    font-size: 50px;
+    font-size: clamp(2rem, 6vw, 50px);
+
     line-height: 1;
     margin: 0;
     padding: 40px 0;
