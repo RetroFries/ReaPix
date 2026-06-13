@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Akshar';
+    src: url('Website Assets/Akshar-SemiBold.ttf') format('truetype');
+    
+}
+
+.header {
+    display: flex;
+    align-items: center; 
+    gap: 15px;           
+    padding: 10px 20px;
+}
+
+.header-icon {
+    
+    width: 20%;         
+    max-width: 100px;    
+    min-width: 35px;     
+    height: auto;  
+    filter: drop-shadow(0 0 20px rgba(150, 0, 255, 0.7));  
+}
+
+.header h1 {
+    font-size: clamp(35px, 10vw, 100px);
+    line-height: 1;
+    margin: 0;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7));  
+}
+
+.glow-number {
+    font-size: 26px;
+    color: rgb(98, 0, 255);
+    text-shadow: 0 0 7px #0004fd, 0 0 10px #0004fd, 0 0 20px #0004fd, 0 0 40px #0004fd;
+    vertical-align: middle;
+    
+}
+.download-button {
+    font-family: 'Arial', sans-serif;
+    display: block;
+    width: 100%;
+    padding: 35px 0;
+    background: #0004fd;
+    color: white;
+    text-decoration: none;
+    border-radius: 300px;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px #0004fd;
+    transition: box-shadow 0.3s ease;
+    font-family: 'Akshar', sans-serif;
+    transition: box-shadow 0.3s ease, transform .1s ease-out, text-shadow 0.3s ease;
+}
+
+.download-button:hover {
+    box-shadow: 0 0 30px #0004fd;
+    transform: scale(1.04); 
+}
+
+.download-button:active {
+    cursor: grabbing; 
+    transform: scale(0.9); 
+}
+.discord-button {
+    font-family: 'Arial', sans-serif;
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    background: #5865F2;
+    color: white;
+    text-decoration: none;
+    border-radius: 300px;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px #5865F2;
+    transition: box-shadow 0.3s ease;
+    font-family: 'Akshar', sans-serif;
+    transition: box-shadow 0.3s ease, transform .1s ease-out, text-shadow 0.3s ease;
+}
+
+.discord-button:hover {
+    box-shadow: 0 0 30px #5865F2;
+    transform: scale(1.04); 
+}
+
+.discord-button:active {
+    cursor: grabbing; 
+    transform: scale(0.9); 
+}
+html, body {
+    font-family: 'Akshar', sans-serif;
+    filter: drop-shadow(0 0 2000px rgba(150, 0, 255, 0.7));
+    line-height: 1.2;
+}
+
+h2 {
+
+    font-size: 50px;
+    line-height: 1;
+    margin: 0;
+    padding: 40px 0;
+    filter: drop-shadow(0 0 90px #0004fd);
+}
+html {
+    background: rgb(17, 0, 20);
+    margin: 0;
+    padding: 10px;
+    color: white;
+    
+}
+
+.discord-text {
+    font-size: 1.4rem;
+    color: #5865F2;
+    text-decoration: none;
+    
+    -webkit-text-stroke: 2px #ffffff;
+    paint-order: stroke fill; 
+    text-shadow: 0 0 20px #5865F2;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.cred-text {
+    font-size: 1.6rem;
+    color: #fbff00;
+    text-decoration: none;
+    
+    -webkit-text-stroke: 2px #ffffff;
+    paint-order: stroke fill; 
+    text-shadow: 0 0 10px #ffc400;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+a:not(.discord-button):not(.download-button):not(.discord-text):not(.cred-text) {
+    font-size: 1.2rem;
+    color: #ff0000;
+    text-decoration: none;
+    
+    -webkit-text-stroke: 2px #ffffff;
+    paint-order: stroke fill; 
+    text-shadow: 0 0 20px #ff0000;
+    line-height: 1.5;
+}
+
+.showcase-image {
+    width: 19%;
+    height: 200px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+.roll-button {
+    font-family: 'Arial', sans-serif;
+    display: block;
+    width: 100%;
+    padding: 30px 0;
+    background: #ff0000;
+    color: white;
+    text-decoration: none; 
+    border-radius: 300px;
+    text-align: center; 
+    font-size: 1.5rem;
+    box-shadow: 0 0 15px #ff0000;
+
+    transition: box-shadow 0.3s ease, transform .1s ease-out, text-shadow 0.3s ease;
+    font-family: 'Akshar', sans-serif;
+    cursor: pointer;
+    border: none; 
+}
+
+.roll-button:hover {
+    box-shadow: 0 0 30px #ff0000;
+    transform: scale(1.04); 
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); 
+}
+
+.roll-button:active {
+    cursor: grabbing; 
+    transform: scale(0.9); 
+}

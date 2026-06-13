@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ReaPix</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+            <!--[if lt IE 7]>
+                <p class="browsehappy"> HOLY SHIT BUDDY YOUR BROWSER IS SO OLD <a href="#">dude get that thing upgraded atp</a></p>
+            <![endif]-->
+            
+            <script src="main.js" async defer></script>
+
+            <header> 
+                <div class="header">
+                    <img src="Website Assets\logo.png" alt="ReaPix Logo" class="header-icon"> 
+                    
+                    
+                    <h1>ReaPix Archive</h1>
+                </div>
+                <hr>
+            </header>
+            <a href="https://github.com/RetroFries/Reaction-Pics/archive/refs/heads/main.zip" id="dl-link" class="download-button">
+        Download Latest Collection!
+            </a>
+
+            <script>
+            fetch('https://api.github.com/repos/RetroFries/Reaction-Pics/commits/main')
+                .then(r => r.json())
+                .then(data => {
+                const date = new Date(data.commit.author.date).toLocaleDateString();
+                document.getElementById('dl-link').textContent = `Download Latest Collection! (Updated ${date})`;
+                });
+
+            fetch('https://api.github.com/repos/RetroFries/Reaction-Pics/git/trees/main?recursive=1')
+            .then(r => r.json())
+            .then(data => {
+                const count = data.tree.filter(f => 
+                    f.path.startsWith('Reaction Pics/') && f.type === 'blob'
+                ).length;
+                document.getElementById('image-count').textContent = count;
+            });
+            </script>
+            
+                
+            <br>
+            <a href="https://discord.gg/CBnWMTNrHQ" id="dc-link" class="discord-button">
+        Join our Discord Server!
+            </a>
+            <br>
+            <hr>
+            <h2>About ReaPix</h2>
+            <p> Reaction Images are a staple of the internet. They're scattered across Reddit, Discord, Tiktok, Youtube, and way more. Finding them, however, is not so easy. Most people just save memes that they see or like, and then they go to die in their Downloads folder. </p>
+            
+            <p> I was kind of tired of this, so I made an archive of all my reaction memes. After a while though, I spent hours on reddit and other sites looking for new images for my new collection. When I hit 1000 images, and Github couldn't show all of them on 
+                one repo, I decided to start my collection as a public archive website of images that any interweb dweller could use to their hearts content. </p>
+            <p>
+                Since the name "Reaction Pic Library by Retrofries" is terrible, I named it ReaPix. You know, a portmanteau of "reaction" and "pictures"... you get it. As of right now, I've reached a grand total of <span id="image-count" class="glow-number">...</span> images! I'm excited to see how far this can go, and I hope you enjoy!
+            </p>
+            <img class="showcase-image" id="showcase1">
+            <img class="showcase-image" id="showcase2">
+            <img class="showcase-image" id="showcase3">
+            <img class="showcase-image" id="showcase4">
+            <img class="showcase-image" id="showcase5">
+            <br>
+            <br>
+            <br>
+            <button id="roll-button" onclick="rollAllImages()" class="roll-button">Roll the Wheel!</button>
+            <br>
+            <hr>
+            <h2>How to Extract</h2>
+            <p> Extracting the ReaPix Library is easy. If you want the latest collection, simply click "Download Latest Collection" at the top of the page. Doing this will give you a decently sized ZIP file.</p>
+            
+            <p> Unzip the file and place the Reaction Pics folder in your desired location, like Desktop for example. Once you've done that, you can delete the ZIP file and any other leftovers.</p>
+            
+            <p> If you're on Mac, I'm so sorry... but pity aside, you can use the built-in Archive Utility to extract it.</p>
+            
+            <hr>
+            <h2>Contribute</h2>
+            <p> If you have want to add YOUR OWN reaction image to the ReaPix Library, you can join the Discord with the button at the top. You can post the image in the <code>#recommend</code> channel, and a mod can add it!
+            Because it would be difficult to implement, your image won't be credited with your account. Keep this in mind, and you'll be good to go!</p> 
+            <hr>
+            <h2>Credits</h2>
+            <p>Many different sources were used to build the ReaPix Library, but some notable ones include:</p>
+            <ul>
+                <li><a href="https://www.reddit.com/r/reactionimages/" class="discord-text">Our Discord</a></li>
+                <li><a href="https://www.reddit.com/r/reactionimages/">r/reactionimages</a></li>
+                <li><a href="https://www.reddit.com/r/reactionpics/">r/reactionpics</a></li>
+                <li><a href="https://reactionimagesdaily.tumblr.com/">Tumblr ReactionImagesDaily</a></li>
+                <li><a href="https://www.knowyourmeme.com/">Know Your Meme</a></li>
+                <li><a href="https://www.pinterest.com/">Pinterest</a></li>
+                
+                
+            </ul>
+            <hr>
+            <h2>Support Me!</h2>
+            <p>If you like what I do, you can help me by sharing this site with a friend or family member. Even just a small share can
+                help ReaPix grow and reach more people. You can also join the Discord.
+            </p>
+            <p>
+                You can find me at <a href="https://github.com/RetroFries" class="cred-text">RetroFries on Github</a>. You can find the actual repo there if you want to download it the old fashioned way.</p>
+
+            </p>
+            <hr>
+            <sub>License: there is no license. you have been fooled.</sub>
+            <br>
+            
+        
+    </body>
+    
+    
+</html>
